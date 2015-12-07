@@ -1,10 +1,7 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
 'use strict';
 
 var React = require('react-native');
+var reactNativeStore = require('react-native-store');
 var {
   AsyncStorage,
   PickerIOS,
@@ -12,98 +9,76 @@ var {
   AppRegistry,
   View
 } = React;
-var PickerItemIOS = PickerIOS.Item;
-var STORAGE_KEY = '@AsyncStorageExample:key';
-var COLORS = ['red', 'orange', 'yellow', 'green', 'blue'];
+
+var test = async function() {
+    //Get/Create model
+    var userModel = await reactNativeStore.model("user");
+
+    // Add Data
+    var add_data = await userModel.add([{
+      username: "tom",
+      age: 12,
+      sex: "man"
+    },{
+      username: "test",
+      age: 22,
+      sex: "man"
+    },{
+      username: "1test",
+      age: 42,
+      sex: "man"
+    }]);
+    // return object or null
+    console.log("add_data "+JSON.stringify(add_data));
+
+    // Update Data
+    var update_data = await userModel.update({
+      username: "mary"
+    },{
+      where: {
+        username: "tom"    
+      }
+    });
+    console.log("update_data "+JSON.stringify(update_data));
+
+    //Remove data with a filter
+    var remove_data = await userModel.remove({
+      where: {
+        age: { lt: 15 }
+      }
+    });
+    console.log(remove_data);
+    //Remove all data (pass no where filter)
+    var remove_data = await userModel.remove();
+    console.log("remove_data"+JSON.stringify(remove_data));
+
+    // search using advanced queries
+    var find_data = await userModel.find({
+      where: {
+        and: [{ username: { neq: 'tom' } }, { age: { gte: 40 } }]
+      },
+      order: {
+        age: 'ASC',
+      }
+    });
+    console.log("find ",JSON.stringify(find_data));
+  }
 
 var AsyncStorageExample = React.createClass({
-  componentDidMount() {
-    this._loadInitialState().done();
-  },
-
-  async _loadInitialState() {
-    try {
-      var value = await AsyncStorage.getItem(STORAGE_KEY);
-      if (value !== null){
-        this.setState({selectedValue: value});
-        this._appendMessage('Recovered selection from disk: ' + value);
-      } else {
-        this._appendMessage('Initialized with no selection on disk.');
-      }
-    } catch (error) {
-      this._appendMessage('AsyncStorage error: ' + error.message);
-    }
-  },
 
   getInitialState() {
-    return {
-      selectedValue: COLORS[0],
-      messages: [],
-    };
+    return test();
   },
 
-  render() {
+    render : function() {
     var color = this.state.selectedValue;
     return (
       <View>
-        <PickerIOS
-          selectedValue={color}
-          onValueChange={this._onValueChange}>
-          {COLORS.map((value) => (
-            <PickerItemIOS
-              key={value}
-              value={value}
-              label={value}
-            />
-          ))}
-        </PickerIOS>
-        <Text>
-          {'Selected: '}
-          <Text style={{color}}>
-            {this.state.selectedValue}
-          </Text>
-        </Text>
-        <Text>{' '}</Text>
-        <Text onPress={this._removeStorage}>
-          Press here to remove from storage.
-        </Text>
-        <Text>{' '}</Text>
-        <Text>Messages:</Text>
-        {this.state.messages.map((m) => <Text>{m}</Text>)}
+        <Text>Hello</Text>
       </View>
     );
   },
 
-  async _onValueChange(selectedValue) {
-    this.setState({selectedValue});
-    try {
-      await AsyncStorage.setItem(STORAGE_KEY, selectedValue);
-      this._appendMessage('Saved selection to disk: ' + selectedValue);
-    } catch (error) {
-      this._appendMessage('AsyncStorage error: ' + error.message);
-    }
-  },
-
-  async _removeStorage() {
-    try {
-      await AsyncStorage.removeItem(STORAGE_KEY);
-      this._appendMessage('Selection removed from disk.');
-    } catch (error) {
-      this._appendMessage('AsyncStorage error: ' + error.message);
-    }
-  },
-
-  _appendMessage(message) {
-    this.setState({messages: this.state.messages.concat(message)});
-  },
 });
 
-exports.title = 'AsyncStorage';
-exports.description = 'Asynchronous local disk storage.';
-exports.examples = [
-  {
-    title: 'Basics - getItem, setItem, removeItem',
-    render(): ReactElement { return <BasicStorageExample />; }
-  },
-];
 AppRegistry.registerComponent('AsyncStorageExample', () => AsyncStorageExample);
