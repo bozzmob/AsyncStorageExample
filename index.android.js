@@ -9,6 +9,7 @@ var {
   AsyncStorage,
   PickerIOS,
   Text,
+  AppRegistry,
   View
 } = React;
 var PickerItemIOS = PickerIOS.Item;
