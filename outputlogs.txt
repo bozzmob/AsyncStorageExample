@@ -1,0 +1,91 @@
+12-07 21:15:53.996 22955-31032/com.asyncstorageexample I/ReactNativeJS: === start react-native-store test! ===
+12-07 21:15:54.021 22955-31032/com.asyncstorageexample I/ReactNativeJS: Running application "AsyncStorageExample" with appParams: {"initialProps":{},"rootTag":1}. __DEV__ === true, development-level warning are ON, performance optimizations are OFF
+12-07 21:15:54.026 22955-22986/com.asyncstorageexample E/: [android_ws] Format: 5, Width: 1080, Height: 1920
+12-07 21:15:54.026 22955-22986/com.asyncstorageexample E/: [android_ws] Format: 5, Width: 1080, Height: 1920
+12-07 21:15:54.126 22955-31032/com.asyncstorageexample I/ReactNativeJS: 0. init data
+12-07 21:15:54.411 22955-31032/com.asyncstorageexample I/ReactNativeJS: 1. find method:
+12-07 21:15:54.431 22955-31032/com.asyncstorageexample I/ReactNativeJS: [ { price: 1,
+12-07 21:15:54.431 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'EU', coords: { lat: 423, lng: 123 } },
+12-07 21:15:54.431 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 5 },
+12-07 21:15:54.431 22955-31032/com.asyncstorageexample I/ReactNativeJS:   { price: 1,
+12-07 21:15:54.431 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'EU', coords: { lat: 423, lng: 123 } },
+12-07 21:15:54.431 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 6 },
+12-07 21:15:54.431 22955-31032/com.asyncstorageexample I/ReactNativeJS:   { price: 4,
+12-07 21:15:54.431 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'InterGalatic Space', coords: { lat: 9001, lng: 42 } },
+12-07 21:15:54.431 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 9 },
+12-07 21:15:54.431 22955-31032/com.asyncstorageexample I/ReactNativeJS:   { price: 9,
+12-07 21:15:54.431 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'Outer Space', coords: { lat: 999, lng: 999 } },
+12-07 21:15:54.431 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 8 } ]
+12-07 21:15:54.446 22955-31032/com.asyncstorageexample I/ReactNativeJS: 2. ①findById method:
+12-07 21:15:54.456 22955-31032/com.asyncstorageexample I/ReactNativeJS: { name: 't',
+12-07 21:15:54.456 22955-31032/com.asyncstorageexample I/ReactNativeJS:   price: 999,
+12-07 21:15:54.456 22955-31032/com.asyncstorageexample I/ReactNativeJS:   location: { name: 'Outside', coords: { lat: -1, lng: 0 } },
+12-07 21:15:54.456 22955-31032/com.asyncstorageexample I/ReactNativeJS:   _id: 10 }
+12-07 21:15:54.466 22955-31032/com.asyncstorageexample I/ReactNativeJS: 2. ②findById method (if data is null):
+12-07 21:15:54.466 22955-31032/com.asyncstorageexample I/ReactNativeJS: null
+12-07 21:15:54.531 22955-31032/com.asyncstorageexample I/ReactNativeJS: 3. update method:
+12-07 21:15:54.536 22955-31032/com.asyncstorageexample I/ReactNativeJS: [ { name: 'a',
+12-07 21:15:54.536 22955-31032/com.asyncstorageexample I/ReactNativeJS:     price: 0,
+12-07 21:15:54.536 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'USA', coords: { lat: 123, lng: 123 } },
+12-07 21:15:54.536 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 2 },
+12-07 21:15:54.536 22955-31032/com.asyncstorageexample I/ReactNativeJS:   { name: 'a',
+12-07 21:15:54.536 22955-31032/com.asyncstorageexample I/ReactNativeJS:     price: 0,
+12-07 21:15:54.536 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'USA', coords: { lat: 123, lng: 123 } },
+12-07 21:15:54.536 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 4 },
+12-07 21:15:54.536 22955-31032/com.asyncstorageexample I/ReactNativeJS:   { name: 'c',
+12-07 21:15:54.536 22955-31032/com.asyncstorageexample I/ReactNativeJS:     price: 0,
+12-07 21:15:54.536 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'EU', coords: { lat: 423, lng: 123 } },
+12-07 21:15:54.536 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 6 } ]
+12-07 21:15:54.561 22955-31032/com.asyncstorageexample I/ReactNativeJS: 4. ①updatedById method:
+12-07 21:15:54.566 22955-31032/com.asyncstorageexample I/ReactNativeJS: { name: 'z',
+12-07 21:15:54.566 22955-31032/com.asyncstorageexample I/ReactNativeJS:   price: 999,
+12-07 21:15:54.566 22955-31032/com.asyncstorageexample I/ReactNativeJS:   location: { name: 'Outside', coords: { lat: -1, lng: 0 } },
+12-07 21:15:54.566 22955-31032/com.asyncstorageexample I/ReactNativeJS:   _id: 10 }
+12-07 21:15:54.576 22955-31032/com.asyncstorageexample I/ReactNativeJS: 4. ②updatedById method (if data is null):
+12-07 21:15:54.576 22955-31032/com.asyncstorageexample I/ReactNativeJS: null
+12-07 21:15:54.651 22955-31032/com.asyncstorageexample I/ReactNativeJS: 5. remove method:
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS: [ { name: 'j',
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     price: 3,
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'USA', coords: { lat: 123, lng: 123 } },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 1 },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:   { name: 'a',
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     price: 0,
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'USA', coords: { lat: 123, lng: 123 } },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 2 },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:   { name: 'v',
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     price: 1,
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'USA', coords: { lat: 123, lng: 123 } },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 3 },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:   { name: 'a',
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     price: 0,
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'USA', coords: { lat: 123, lng: 123 } },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 4 },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:   { name: 's',
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     price: 1,
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'EU', coords: { lat: 423, lng: 123 } },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 5 },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:   { name: 'c',
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     price: 0,
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'EU', coords: { lat: 423, lng: 123 } },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 6 },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:   { name: 'r',
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     price: 7,
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'EU', coords: { lat: 423, lng: 123 } },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 7 },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:   { name: 'i',
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     price: 9,
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'Outer Space', coords: { lat: 999, lng: 999 } },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 8 },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:   { name: 'p',
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     price: 4,
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'InterGalatic Space', coords: { lat: 9001, lng: 42 } },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 9 },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:   { name: 'z',
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     price: 999,
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     location: { name: 'Outside', coords: { lat: -1, lng: 0 } },
+12-07 21:15:54.661 22955-31032/com.asyncstorageexample I/ReactNativeJS:     _id: 10 } ]
+12-07 21:15:54.696 22955-31032/com.asyncstorageexample I/ReactNativeJS: 6. ①removeById method:
+12-07 21:15:54.696 22955-31032/com.asyncstorageexample I/ReactNativeJS: null
+12-07 21:15:54.726 22955-31032/com.asyncstorageexample I/ReactNativeJS: 6. ②①removeById method (if data is null):
+12-07 21:15:54.726 22955-31032/com.asyncstorageexample I/ReactNativeJS: null
+12-07 21:15:54.731 22955-31032/com.asyncstorageexample I/ReactNativeJS: === react-native-store test complete! ===
