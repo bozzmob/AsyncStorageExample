@@ -1,19 +1,8 @@
 var reactNativeStore = require('react-native-store');
 
 class AppStore {
-    constructor() {
-        this.testDataSet = [
-            { name: 'j', price: 3, location: { name: 'USA', coords: { lat: 123, lng: 123 }  } },
-            { name: 'a', price: 4, location: { name: 'USA', coords: { lat: 123, lng: 123 }  } },
-            { name: 'v', price: 1, location: { name: 'USA', coords: { lat: 123, lng: 123 }  } },
-            { name: 'a', price: 2, location: { name: 'USA', coords: { lat: 123, lng: 123 }  } },
-            { name: 's', price: 1, location: { name: 'EU', coords: { lat: 423, lng: 123 }  } },
-            { name: 'c', price: 1, location: { name: 'EU', coords: { lat: 423, lng: 123 }  } },
-            { name: 'r', price: 7, location: { name: 'EU', coords: { lat: 423, lng: 123 }  } },
-            { name: 'i', price: 9, location: { name: 'Outer Space', coords: { lat: 999, lng: 999 }  } },
-            { name: 'p', price: 4, location: { name: 'InterGalatic Space', coords: { lat: 9001, lng: 42 }  } },
-            { name: 't', price: 999, location: { name: 'Outside', coords: { lat: -1, lng: 0 }  } },
-        ];
+    constructor(DataArray) {
+        this.testDataSet = DataArray;
     }
 
     async init() {
