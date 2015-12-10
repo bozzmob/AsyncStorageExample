@@ -52,7 +52,8 @@ async function userTest () {
     await user.init();
     await user.findTest();
     await user.findByIdTest();
-    await user.updateTest();
+    var returnVal = await user.updateTest();
+    console.log("returnVal = "+JSON.stringify(returnVal));
     await user.updateByIdTest();
     await user.removeTest();
     await user.removeByIdTest();
@@ -65,15 +66,16 @@ async function diffTest () {
     await diff.init();
     await diff.findTest();
     await diff.findByIdTest();
-    await diff.updateTest();
+    var returnVal = await diff.updateTest();
+    console.log("returnVal = "+JSON.stringify(returnVal));
     await diff.updateByIdTest();
     await diff.removeTest();
     await diff.removeByIdTest();
     console.info('=== react-native-store DIFF test complete! ===')
 }
 
-userTest();
-diffTest();
+userTest('user');
+diffTest('diff');
 var AsyncStorageExample = React.createClass({
 
     render : function() {

@@ -81,6 +81,7 @@ class AppStore {
         var results = await this.model.update({ price: 0 }, filter);
         console.log("3. update method:");
         console.log(results);
+        return results;
         //[{ name: 'a', price: 0, location: { name: 'USA', coords: { lat: 123, lng: 123 }  } },
         // { name: 'a', price: 0, location: { name: 'USA', coords: { lat: 123, lng: 123 }  } },
         // { name: 'c', price: 0, location: { name: 'EU', coords: { lat: 423, lng: 123 }  } } ],
