@@ -15,6 +15,28 @@ var reactNativeStore = require('react-native-store');
 var RNStorage = require('./RNStorage');
 
 var zzz = new RNStorage();
+//zzz.startTest();
+
+async function startTest () {
+console.info('=== start react-native-store test! ===')
+await zzz.destroyModel();
+await zzz.init();
+await zzz.findTest();
+await zzz.findByIdTest();
+await zzz.updateTest();
+await zzz.updateByIdTest();
+await zzz.removeTest();
+await zzz.removeByIdTest();
+console.info('=== react-native-store test complete! ===')
+}
+
+startTest();
+// }
+// catch(e){
+//     console.log("hello");
+//     console.error(e);
+// }
+
 var AsyncStorageExample = React.createClass({
 
     render : function() {

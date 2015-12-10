@@ -1,6 +1,6 @@
 var reactNativeStore = require('react-native-store');
 
-class Test {
+class AppStore {
     constructor() {
         this.testDataSet = [
             { name: 'j', price: 3, location: { name: 'USA', coords: { lat: 123, lng: 123 }  } },
@@ -14,26 +14,25 @@ class Test {
             { name: 'p', price: 4, location: { name: 'InterGalatic Space', coords: { lat: 9001, lng: 42 }  } },
             { name: 't', price: 999, location: { name: 'Outside', coords: { lat: -1, lng: 0 }  } },
         ];
-        this.startTest();
     }
 
-    async startTest() {
-        try {
-            console.info('=== start react-native-store test! ===')
-            await this.destroyModel();
-            await this.init();
-            await this.findTest();
-            await this.findByIdTest();
-            await this.updateTest();
-            await this.updateByIdTest();
-            await this.removeTest();
-            await this.removeByIdTest();
-            console.info('=== react-native-store test complete! ===')
-        } catch(error) {
-            console.error(error);
-        }
+    // async startTest() {
+    //     try {
+    //         console.info('=== start react-native-store test! ===')
+    //         await this.destroyModel();
+    //         await this.init();
+    //         await this.findTest();
+    //         await this.findByIdTest();
+    //         await this.updateTest();
+    //         await this.updateByIdTest();
+    //         await this.removeTest();
+    //         await this.removeByIdTest();
+    //         console.info('=== react-native-store test complete! ===')
+    //     } catch(error) {
+    //         console.error(error);
+    //     }
 
-    }
+    // }
 
     async init() {
         //clear storage
@@ -148,4 +147,4 @@ class Test {
         console.log(results2);
     }
 }
-module.exports = Test;
+module.exports = AppStore;
