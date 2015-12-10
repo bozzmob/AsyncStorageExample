@@ -16,24 +16,6 @@ class AppStore {
         ];
     }
 
-    // async startTest() {
-    //     try {
-    //         console.info('=== start react-native-store test! ===')
-    //         await this.destroyModel();
-    //         await this.init();
-    //         await this.findTest();
-    //         await this.findByIdTest();
-    //         await this.updateTest();
-    //         await this.updateByIdTest();
-    //         await this.removeTest();
-    //         await this.removeByIdTest();
-    //         console.info('=== react-native-store test complete! ===')
-    //     } catch(error) {
-    //         console.error(error);
-    //     }
-
-    // }
-
     async init() {
         //clear storage
         //reactNativeStore.clear();

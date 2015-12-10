@@ -31,11 +31,6 @@ console.info('=== react-native-store test complete! ===')
 }
 
 startTest();
-// }
-// catch(e){
-//     console.log("hello");
-//     console.error(e);
-// }
 
 var AsyncStorageExample = React.createClass({
 
