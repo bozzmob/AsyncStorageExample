@@ -74,8 +74,9 @@ async function diffTest () {
     console.info('=== react-native-store DIFF test complete! ===')
 }
 
-userTest('user');
-diffTest('diff');
+userTest();
+diffTest();
+
 var AsyncStorageExample = React.createClass({
 
     render : function() {
