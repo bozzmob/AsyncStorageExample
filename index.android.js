@@ -75,9 +75,6 @@ async function diffTest () {
     console.info('=== react-native-store DIFF test complete! ===')
 }
 
-//diffTest();
-
-
 
 var AsyncStorageExample = React.createClass({
     
@@ -90,20 +87,11 @@ var AsyncStorageExample = React.createClass({
 
     componentDidMount: function () {
         console.log("componentDidMount");
-        var p1 = new Promise(
-            function (resolve,reject) {
-                var retval = userTest();
-                console.log("about to resolve"+JSON.stringify(retval));
-                resolve(retval);
-        });
-        p1.then(
-            function (vararr) {
-                console.log("about to set state");
-                this.stateSetting(vararr);
-        })
-        .catch(
-            function (err) {
-                console.log('rejected promise ('+reason+') here.');
+        var retval = userTest();
+        console.log("componentDidMount retval"+retval);
+        retval.then(function (argument) {
+            console.log("argument"+JSON.stringify(argument));
+            this.stateSetting(argument);
         });
     },
 
