@@ -16,30 +16,30 @@ var RNStorage = require('./RNStorage');
 
 var userArr = 
 [
-    { name: 'j', price: 3, location: { name: 'USA', coords: { lat: 123, lng: 123 }  } },
-    { name: 'a', price: 4, location: { name: 'USA', coords: { lat: 123, lng: 123 }  } },
-    { name: 'v', price: 1, location: { name: 'USA', coords: { lat: 123, lng: 123 }  } },
-    { name: 'a', price: 2, location: { name: 'USA', coords: { lat: 123, lng: 123 }  } },
-    { name: 's', price: 1, location: { name: 'EU', coords: { lat: 423, lng: 123 }  } },
-    { name: 'c', price: 1, location: { name: 'EU', coords: { lat: 423, lng: 123 }  } },
-    { name: 'r', price: 7, location: { name: 'EU', coords: { lat: 423, lng: 123 }  } },
-    { name: 'i', price: 9, location: { name: 'Outer Space', coords: { lat: 999, lng: 999 }  } },
-    { name: 'p', price: 4, location: { name: 'InterGalatic Space', coords: { lat: 9001, lng: 42 }  } },
-    { name: 't', price: 999, location: { name: 'Outside', coords: { lat: -1, lng: 0 }  } },
+    { name: 'j', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 3, location: { name: 'USA', coords: { lat: 123, lng: 123 }  } },
+    { name: 'a', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 4, location: { name: 'USA', coords: { lat: 123, lng: 123 }  } },
+    { name: 'v', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 1, location: { name: 'USA', coords: { lat: 123, lng: 123 }  } },
+    { name: 'a', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 2, location: { name: 'USA', coords: { lat: 123, lng: 123 }  } },
+    { name: 's', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 1, location: { name: 'EU', coords: { lat: 423, lng: 123 }  } },
+    { name: 'c', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 1, location: { name: 'EU', coords: { lat: 423, lng: 123 }  } },
+    { name: 'r', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 7, location: { name: 'EU', coords: { lat: 423, lng: 123 }  } },
+    { name: 'i', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 9, location: { name: 'Outer Space', coords: { lat: 999, lng: 999 }  } },
+    { name: 'p', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 4, location: { name: 'InterGalatic Space', coords: { lat: 9001, lng: 42 }  } },
+    { name: 't', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 999, location: { name: 'Outside', coords: { lat: -1, lng: 0 }  } },
 ];
 
 var differentArr = 
 [
-    { name: 'j', price: 1, location: { name: 'USA', coords: { lat: 101, lng: 101 }  } },
-    { name: 'a', price: 2, location: { name: 'USA', coords: { lat: 101, lng: 101 }  } },
-    { name: 'v', price: 3, location: { name: 'USA', coords: { lat: 101, lng: 101 }  } },
-    { name: 'a', price: 4, location: { name: 'USA', coords: { lat: 101, lng: 101 }  } },
-    { name: 's', price: 5, location: { name: 'EU', coords: { lat: 423, lng: 101 }  } },
-    { name: 'c', price: 6, location: { name: 'EU', coords: { lat: 423, lng: 101 }  } },
-    { name: 'r', price: 7, location: { name: 'EU', coords: { lat: 423, lng: 101 }  } },
-    { name: 'i', price: 8, location: { name: 'Outer Space', coords: { lat: 999, lng: 999 }  } },
-    { name: 'p', price: 9, location: { name: 'InterGalatic Space', coords: { lat: 9001, lng: 42 }  } },
-    { name: 't', price: 10, location: { name: 'Outside', coords: { lat: -1, lng: 0 }  } },
+    { name: 'j', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 1, location: { name: 'USA', coords: { lat: 101, lng: 101 }  } },
+    { name: 'a', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 2, location: { name: 'USA', coords: { lat: 101, lng: 101 }  } },
+    { name: 'v', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 3, location: { name: 'USA', coords: { lat: 101, lng: 101 }  } },
+    { name: 'a', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 4, location: { name: 'USA', coords: { lat: 101, lng: 101 }  } },
+    { name: 's', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 5, location: { name: 'EU', coords: { lat: 423, lng: 101 }  } },
+    { name: 'c', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 6, location: { name: 'EU', coords: { lat: 423, lng: 101 }  } },
+    { name: 'r', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 7, location: { name: 'EU', coords: { lat: 423, lng: 101 }  } },
+    { name: 'i', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 8, location: { name: 'Outer Space', coords: { lat: 999, lng: 999 }  } },
+    { name: 'p', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 9, location: { name: 'InterGalatic Space', coords: { lat: 9001, lng: 42 }  } },
+    { name: 't', img: 'https://cdn4.iconfinder.com/data/icons/48x48-free-object-icons/48/House.png', price: 10, location: { name: 'Outside', coords: { lat: -1, lng: 0 }  } },
 ];
 
 var user = new RNStorage(userArr);
