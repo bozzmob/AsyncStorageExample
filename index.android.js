@@ -54,6 +54,7 @@ async function userTest () {
     await user.findByIdTest();
     var returnVal = await user.updateTest();
     console.log("returnVal = "+JSON.stringify(returnVal));
+    stateSetting(returnVal);
     await user.updateByIdTest();
     await user.removeTest();
     await user.removeByIdTest();
@@ -78,11 +79,26 @@ userTest();
 diffTest();
 
 var AsyncStorageExample = React.createClass({
+    
+    getInitialState: function () {
+        return {
+            arr : [],
+        }
+    },
 
+    stateSetting: function(arrval) {
+        this.setState({
+            arr : arrval,
+    },
+            
     render : function() {
     return (
       <View>
-        <Text>Hello</Text>
+        {this.state.arr.map(arr =>
+          <Text key={arr.name}>
+            &bull; {arr.name}
+          </Text>
+        )};
       </View>
     );
   },
