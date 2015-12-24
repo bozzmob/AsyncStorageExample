@@ -75,6 +75,9 @@ async function diffTest () {
     console.info('=== react-native-store DIFF test complete! ===')
 }
 
+//diffTest();
+
+
 
 var AsyncStorageExample = React.createClass({
     
@@ -87,6 +90,7 @@ var AsyncStorageExample = React.createClass({
 
     componentDidMount: function () {
         console.log("componentDidMount");
+
         var retval = userTest();
         console.log("componentDidMount retval"+retval);
         retval.then(function (argument) {
