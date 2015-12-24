@@ -76,7 +76,15 @@ async function diffTest () {
 }
 
 userTest();
-diffTest();
+//diffTest();
+
+async function stateSetting(arrval) {
+    console.log("stateSetting");
+    this.setState({
+        arr : arrval,
+    })
+    console.log("value"+this.state.arr);
+};
 
 var AsyncStorageExample = React.createClass({
     
@@ -84,11 +92,6 @@ var AsyncStorageExample = React.createClass({
         return {
             arr : [],
         }
-    },
-
-    stateSetting: function(arrval) {
-        this.setState({
-            arr : arrval,
     },
             
     render : function() {
@@ -98,7 +101,7 @@ var AsyncStorageExample = React.createClass({
           <Text key={arr.name}>
             &bull; {arr.name}
           </Text>
-        )};
+        )}
       </View>
     );
   },
