@@ -96,7 +96,7 @@ var AsyncStorageExample = React.createClass({
         retval.then(function (argument) {
             console.log("argument"+JSON.stringify(argument));
             this.stateSetting(argument);
-        });
+        }.bind(this));
     },
 
     stateSetting: function(arrval) {
@@ -113,7 +113,7 @@ var AsyncStorageExample = React.createClass({
         return (
           <View>
             {this.state.arr.map(arr =>
-              <Text key={arr.name}>
+              <Text>
                 &bull; {arr.name}
               </Text>
             )}
