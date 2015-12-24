@@ -54,11 +54,11 @@ async function userTest () {
     await user.findByIdTest();
     var returnVal = await user.updateTest();
     console.log("returnVal = "+JSON.stringify(returnVal));
-    stateSetting(returnVal);
     await user.updateByIdTest();
     await user.removeTest();
     await user.removeByIdTest();
     console.info('=== react-native-store USER test complete! ===')
+    return returnVal;
 }
 
 async function diffTest () {
@@ -75,35 +75,58 @@ async function diffTest () {
     console.info('=== react-native-store DIFF test complete! ===')
 }
 
-userTest();
 //diffTest();
 
-async function stateSetting(arrval) {
-    console.log("stateSetting");
-    this.setState({
-        arr : arrval,
-    })
-    console.log("value"+this.state.arr);
-};
+
 
 var AsyncStorageExample = React.createClass({
     
     getInitialState: function () {
+        console.log("getInitialState");
         return {
             arr : [],
         }
     },
+
+    componentDidMount: function () {
+        console.log("componentDidMount");
+        var p1 = new Promise(
+            function (resolve,reject) {
+                var retval = userTest();
+                console.log("about to resolve"+JSON.stringify(retval));
+                resolve(retval);
+        });
+        p1.then(
+            function (vararr) {
+                console.log("about to set state");
+                this.stateSetting(vararr);
+        })
+        .catch(
+            function (err) {
+                console.log('rejected promise ('+reason+') here.');
+        });
+    },
+
+    stateSetting: function(arrval) {
+        console.log("stateSetting");
+        this.setState({
+            arr : arrval,
+        });
+        console.log("value = "+this.state.arr);
+    },
             
     render : function() {
-    return (
-      <View>
-        {this.state.arr.map(arr =>
-          <Text key={arr.name}>
-            &bull; {arr.name}
-          </Text>
-        )}
-      </View>
-    );
+        console.log("render");
+        console.log("render - value of this.state.arr"+JSON.stringify(this.state.arr));
+        return (
+          <View>
+            {this.state.arr.map(arr =>
+              <Text key={arr.name}>
+                &bull; {arr.name}
+              </Text>
+            )}
+          </View>
+        );
   },
 
 });
