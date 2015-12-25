@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react-native');
+
 var reactNativeStore = require('react-native-store');
 var {
   AsyncStorage,
@@ -77,8 +78,6 @@ async function diffTest () {
 
 //diffTest();
 
-
-
 var AsyncStorageExample = React.createClass({
     
     getInitialState: function () {
@@ -119,7 +118,7 @@ var AsyncStorageExample = React.createClass({
             )}
           </View>
         );
-  },
+    },
 
 });
 
